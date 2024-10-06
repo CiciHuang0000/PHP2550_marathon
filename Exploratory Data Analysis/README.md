@@ -6,7 +6,7 @@ The weather conditions in a marathon race are crucial and can largely affect run
 
 ### Methods
 
-This report utilizes a data consisting of weather and runner information from 5 marathon races (Boston, Chicago, NYC, Grandmas, Twin Cities) across 15-20 years. Analyzing methods include data quality checks, missing data analysis; summary tables of runner characteristics and weather parameters; summary plots of how different weather parameters affect runner's performances by age and gender; correlation inspection of weather parameters; linear regression model.  
+This report utilizes a data consisting of weather and runner information from 5 marathon races (Boston, Chicago, NYC, Grandmas, Twin Cities) across 15-20 years. Analyzing methods include data quality checks, missing data analysis; summary tables of runner characteristics and weather parameters; summary plots of how different weather parameters affect runner's performances by age and gender; correlation inspection of weather parameters; linear regression model. The whole report can be found [here](report/EDA_report.pdf).
  
 ### Results
 
