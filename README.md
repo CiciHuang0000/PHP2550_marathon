@@ -29,8 +29,7 @@ There have been many calls for greater attention to the treatment of tobacco dep
 
 ### Method
 
-This project utilizes data from a randomized, placebo-controlled trial that was conducted on individuals with current or past MDD who received 12 weeks of either Behavioral Activation for Smoking Cessation (BASC) or standard treatment (ST) and either varenicline or placebo. The trial included 300 daily smokers with a diagnosis of MDD. Multiple imputation was applied to address missing data, and a Lasso algorithm was used for variable selection, with 30% of the observations set aside for validation. Pooled estimates were used to calculate predictions and evaluate the model's performance in terms of discrimination and calibration. The whole report can be found [here](Model Selection/model_selection.pdf).
-
+This project utilizes data from a randomized, placebo-controlled trial that was conducted on individuals with current or past MDD who received 12 weeks of either Behavioral Activation for Smoking Cessation (BASC) or standard treatment (ST) and either varenicline or placebo. The trial included 300 daily smokers with a diagnosis of MDD. Multiple imputation was applied to address missing data, and a Lasso algorithm was used for variable selection, with 30% of the observations set aside for validation. Pooled estimates were used to calculate predictions and evaluate the model's performance in terms of discrimination and calibration. The full report can be found [here](<Model Selection/model_selection.pdf>). 
 ### Results
 
 FTCD Score and Current Major Depressive Disorder (MDD) were found to be important moderators of the effects of BA for smoking cessation. Age, sex, cigarette reward value, income, education, exclusive mentholated cigarette use, pleasurable events scale of complementary reinforcers, and non-hispanic white indicator are valuable predictors of abstinence. 
