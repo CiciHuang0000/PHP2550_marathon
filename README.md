@@ -1,4 +1,9 @@
-# Project 1: Exploring the Effect of Weather on Marathon Performances Across Gender and Age
+# Practical Data Analysis Portfolio
+
+This repository showcases three distinct data analysis projects, showcasing my skills in exploratory data analysis, model selection, and designing simulation studies.
+
+
+## Project 1: Exploring the Effect of Weather on Marathon Performances Across Gender and Age
 
 ### Background
 
@@ -12,9 +17,11 @@ This report utilizes a data consisting of weather and runner information from 5 
 
 This report uses multiple exploratory analysis methods such as missing data detection, summary tables and plots along with a linear regression to investigate the relationship between weather conditions and marathon performances, and how it varies across age and gender. The results show that age is the most important factor in marathon performances. Runners' performances peak around 30 and gradually slows down after approximately 40 years old. Weather conditions humidity, solar radiation, Wind and WBGT show statistically significance, however the estimate coefficients are small, leading to very limited impact on the performances. Also, the exploratory data analysis (EDA) and regression results indicate no significant differences in the impact of weather on marathon performance between males and females. 
 
+### Conclusions
+
 One limitation of our study is we did not analyze the same cohort of runners across all years and marathons, which makes it challenging to control for various confounding factors such as individual runner performance, training, and environmental adaptations. Additionally, our sample size was smaller for older age groups, potentially affecting the reliability of results for those ages. The measurement of air quality is another limitation; the '8-HR RUN AVG BEGIN HOUR' variable lacks clarity in terms of its duration. Furthermore, as our objective was primarily exploratory data analysis (EDA), marginal differences in performance may be difficult to distinguish using plots and summary tables alone. More thorough analyses, such as more sophisticated regression model or advanced machine learning models, may be necessary to obtain more precise and accurate results.
 
-# Project 2: Moderators of Behavioral Activation for Smoking Cessation in Individuals with Major Depressive Disorder
+## Project 2: Moderators of Behavioral Activation for Smoking Cessation in Individuals with Major Depressive Disorder
 
 ### Background
 
@@ -32,7 +39,7 @@ FTCD Score and Current Major Depressive Disorder (MDD) were found to be importan
 
 The Lasso regression model successfully identified moderators and predictors with moderately good discrimination power. However, given the small sample size and imbalanced class, future work needs to be conducted for enhanced generalizability. 
 
-# Project 3 Simulation-Driven Insights for Optimizing Design Parameters in Cluster Randomized Trials
+## Project 3 Simulation-Driven Insights for Optimizing Design Parameters in Cluster Randomized Trials
 
 ### Background
 Budget constraints are a persistent challenge in conducting experiments, making it critical to identify optimal study designs that maximize statistical efficiency while minimizing costs. This project is a simulation study aimed at providing insights into designing optimal cluster randomized trials. In such trials, clusters (e.g., schools, clinics) rather than individuals are randomized to treatment or control groups, and responses are collected from individuals within each cluster. The hierarchical nature of these trials introduces between-cluster and within-cluster variability, which must be accounted for in the design.
