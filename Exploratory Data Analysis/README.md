@@ -1,18 +1,20 @@
 # Exploring the Effect of Weather on Marathon Performances Across Gender and Age
 
-### Background
+## Background
 
-The weather conditions in a marathon race are crucial and can largely affect runner's performances, and this impact varies across gender and age.Past studies show that an increasing WBGT (Wet Bulb Global Temperature) results in slowing of marathon performances and the impact is more evident in male runners than in female runners. Variables such as air quality, WBGT, solar radiation, wind and humidity are important factors to estimate weather conditions. The purpose of this report is to conduct exploratory analysis to investigate the relationship between weather conditions and marathon performances, and how this impact differs across age and gender. 
+Marathon performance is significantly influenced by weather conditions, with factors such as WBGT, humidity, solar radiation, and wind playing critical roles. This study investigates the relationship between weather conditions and marathon performance, focusing on variations across age and gender. Data from five major marathons spanning 15–20 years were analyzed to provide a comprehensive understanding of these dynamics.
 
-### Methods
+## Method
 
-This report utilizes a data consisting of weather and runner information from 5 marathon races (Boston, Chicago, NYC, Grandmas, Twin Cities) across 15-20 years. Analyzing methods include data quality checks, missing data analysis; summary tables of runner characteristics and weather parameters; summary plots of how different weather parameters affect runner's performances by age and gender; correlation inspection of weather parameters; linear regression model. The whole report can be found [here](report/EDA_report.pdf).
- 
-### Results
+The analysis utilized a dataset of 11,564 observations across five major marathons, incorporating weather parameters, runner demographics, and performance metrics measured as a percentage deviation from the course record. Data quality checks included correcting errors such as inconsistencies in relative humidity values. Exploratory analysis involved summarizing runner characteristics, weather parameters, and their relationships through visualizations and descriptive statistics. Correlation analysis assessed interdependencies among weather variables, while regression models were employed to examine the effects of weather conditions, age, and gender on performance, including interaction terms to capture complex dynamics.
 
-This report uses multiple exploratory analysis methods such as missing data detection, summary tables and plots along with a linear regression to investigate the relationship between weather conditions and marathon performances, and how it varies across age and gender. The results show that age is the most important factor in marathon performances. Runners' performances peak around 30 and gradually slows down after approximately 40 years old. Weather conditions humidity, solar radiation, Wind and WBGT show statistically significance, however the estimate coefficients are small, leading to very limited impact on the performances. Also, the exploratory data analysis (EDA) and regression results indicate no significant differences in the impact of weather on marathon performance between males and females. 
+## Results
 
-One limitation of our study is we did not analyze the same cohort of runners across all years and marathons, which makes it challenging to control for various confounding factors such as individual runner performance, training, and environmental adaptations. Additionally, our sample size was smaller for older age groups, potentially affecting the reliability of results for those ages. The measurement of air quality is another limitation; the '8-HR RUN AVG BEGIN HOUR' variable lacks clarity in terms of its duration. Furthermore, as our objective was primarily exploratory data analysis (EDA), marginal differences in performance may be difficult to distinguish using plots and summary tables alone. More thorough analyses, such as more sophisticated regression model or advanced machine learning models, may be necessary to obtain more precise and accurate results.
+The findings revealed that age is the most significant factor influencing marathon performance. Runners generally peak around 30 years old, with significant slowing observed after 60 years for women and 66 years for men. Weather conditions, particularly WBGT, humidity, and solar radiation, demonstrated statistically significant effects on performance; however, the practical impact was minor. These effects were more pronounced in older runners, especially women, while younger runners exhibited greater resilience to varying weather conditions. 
+
+## Conclusions
+
+The study highlights the critical role of age in marathon performance, with weather conditions having a relatively minor but observable impact. Older runners are more sensitive to adverse environmental factors, while younger runners show greater performance stability. Limitations include the lack of consistent cohorts across years and races, smaller sample sizes for older age groups, and uncertainties in air quality measurements. Future research could employ advanced models and larger datasets to refine these findings and address the identified limitations.
 
 ## Files
 ### R
