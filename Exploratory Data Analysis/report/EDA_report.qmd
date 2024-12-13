@@ -11,7 +11,13 @@ editor: visual
 
 # Abstract
 
-Weather conditions are crucial in marathon races and have a significant impact on runners' performances. The purpose of this report is to conduct Exploratory data analysis (EDA) to investigate the relationship between weather conditions and marathon performances, and how this impact differs across age and gender. EDA plots showed no obvious differences in marathon performance across different weather conditions. Yet the statistical model suggests that some weather parameters have a statistically significant impact on performances. However, the estimated effect sizes for these variables are relatively small, indicating that although the associations are statistically significant, their practical impact on marathon performance might be negligible. Limitations of this study include different runners each year & marathon; small sample size for senior runners and air quality measures are not clearly documented, suggesting the need for further research to develop a more accurate result.
+**Background**: Marathon performance is significantly influenced by weather conditions, with factors such as WBGT, humidity, solar radiation, and wind playing critical roles. This study investigates the relationship between weather conditions and marathon performance, focusing on variations across age and gender. Data from five major marathons spanning 15–20 years were analyzed to provide a comprehensive understanding of these dynamics.
+
+**Methods**: The analysis utilized a dataset of 11,564 observations across five major marathons, incorporating weather parameters, runner demographics, and performance metrics measured as a percentage deviation from the course record. Data quality checks included correcting errors such as inconsistencies in relative humidity values. Exploratory analysis involved summarizing runner characteristics, weather parameters, and their relationships through visualizations and descriptive statistics. Correlation analysis assessed interdependencies among weather variables, while regression models were employed to examine the effects of weather conditions, age, and gender on performance, including interaction terms to capture complex dynamics.
+
+**Results**: The findings revealed that age is the most significant factor influencing marathon performance. Runners generally peak around 30 years old, with significant slowing observed after 60 years for women and 66 years for men. Weather conditions, particularly WBGT, humidity, and solar radiation, demonstrated statistically significant effects on performance; however, the practical impact was minor. These effects were more pronounced in older runners, especially women, while younger runners exhibited greater resilience to varying weather conditions. 
+
+**Conclusions**: The study highlights the critical role of age in marathon performance, with weather conditions having a relatively minor but observable impact. Older runners are more sensitive to adverse environmental factors, while younger runners show greater performance stability. Limitations include the lack of consistent cohorts across years and races, smaller sample sizes for older age groups, and uncertainties in air quality measurements. Future research could employ advanced models and larger datasets to refine these findings and address the identified limitations.
 
 # Introduction
 
@@ -43,7 +49,7 @@ marathon_dates <- read.csv("~/Library/Mobile Documents/com~apple~CloudDocs/Deskt
 
 # Data Collection
 
-This report utilizes four datasets to analyze the impact of weather and environmental factors on marathon performance.  The main dataset contains top single-age performances from five major marathons (Boston, Chicago, NYC, Grandma's, and Twin Cities) over a period of 15--20 years, covering runners aged 14 to 85, in total has 11,564 observations with 14 variables. This dataset includes detailed environmental conditions for each marathon, with runner performance represented by `Percent_CR`, indicating the percentage deviation from the current course record. Additional datasets include air quality index (AQI) values, which were obtained from the Environmental Protection Agency's (EPA) Air Quality System (AQS) using the `RAQSAPI` R package. The AQI data were collected as daily summaries for specific parameters, such as PM2.5 and ozone levels, corresponding to the Core-Based Statistical Areas (CBSAs) of the marathon locations on their respective race dates. Other datasets include records of course performances and annual marathon dates, which were integrated to provide a comprehensive view of historical race performance and environmental factors.
+This report utilizes four datasets to analyze the impact of weather and environmental factors on marathon performance. The main dataset contains top single-age performances from five major marathons (Boston, Chicago, NYC, Grandma's, and Twin Cities) over a period of 15--20 years, covering runners aged 14 to 85, in total has 11,564 observations with 14 variables. This dataset includes detailed environmental conditions for each marathon, with runner performance represented by `Percent_CR`, indicating the percentage deviation from the current course record. Additional datasets include air quality index (AQI) values, which were obtained from the Environmental Protection Agency's (EPA) Air Quality System (AQS) using the `RAQSAPI` R package. The AQI data were collected as daily summaries for specific parameters, such as PM2.5 and ozone levels, corresponding to the Core-Based Statistical Areas (CBSAs) of the marathon locations on their respective race dates. Other datasets include records of course performances and annual marathon dates, which were integrated to provide a comprehensive view of historical race performance and environmental factors.
 
 ```{r}
 # Data pre-proccessing
@@ -176,7 +182,7 @@ tbl_summary_weather
 
 ```
 
-The summary table below provides a detailed comparison of AQI values across five cities. The parameter codes used to measure AQI are codes 44201 (Ozone), 88101 (PM2.5) and 88502 (PM2.5). The units of measurement primarily include micrograms per cubic meter (LC) and parts per million. Sample durations include 1-hour, 24-hour, and 8-hour averages. The ozone AQI is measured by 8-hour sample duration and particle pollution is measured by 24-hour sample duration. 
+The summary table below provides a detailed comparison of AQI values across five cities. The parameter codes used to measure AQI are codes 44201 (Ozone), 88101 (PM2.5) and 88502 (PM2.5). The units of measurement primarily include micrograms per cubic meter (LC) and parts per million. Sample durations include 1-hour, 24-hour, and 8-hour averages. The ozone AQI is measured by 8-hour sample duration and particle pollution is measured by 24-hour sample duration.
 
 ```{r}
 # Create a summary table of the AQI values
@@ -290,7 +296,6 @@ age_plot
   
   
 ```
-
 
 ## Age of Peak Performances
 
@@ -428,9 +433,9 @@ age_slope_plot
 
 ## Air Quality Impact
 
-The AQI estimates include durations of 1-hour, 24-hour, and 8-hour run averages. To reflect air quality conditions on race day, we calculated AQI values by averaging the 24-hour (PM2.5) and 8-hour (ozone) estimates. To account for differences in age, we stratified runners into four age categories: 14–31, 32–46, 47–61, and 62–91, and examined the effect of air quality on performance (%CR) for each group by sex.
+The AQI estimates include durations of 1-hour, 24-hour, and 8-hour run averages. To reflect air quality conditions on race day, we calculated AQI values by averaging the 24-hour (PM2.5) and 8-hour (ozone) estimates. To account for differences in age, we stratified runners into four age categories: 14--31, 32--46, 47--61, and 62--91, and examined the effect of air quality on performance (%CR) for each group by sex.
 
-The plot demonstrates that air quality impacts older runners (age group 62–91) more significantly than younger groups, as evident by the higher %CR values across AQI levels and the increasing %CR trend when AQI levels increase. This trend is consistent for both males and females. For younger runners (14–31 and 32–46), %CR remains relatively stable across AQI values, indicating that air quality has less of an impact on their performance. Additionally, mid-aged runners (47–61) show a moderate sensitivity to AQI changes, with a slight upward trend in %CR as AQI values increase. 
+The plot demonstrates that air quality impacts older runners (age group 62--91) more significantly than younger groups, as evident by the higher %CR values across AQI levels and the increasing %CR trend when AQI levels increase. This trend is consistent for both males and females. For younger runners (14--31 and 32--46), %CR remains relatively stable across AQI values, indicating that air quality has less of an impact on their performance. Additionally, mid-aged runners (47--61) show a moderate sensitivity to AQI changes, with a slight upward trend in %CR as AQI values increase.
 
 ```{r}
 # Calculate average aqi values for each year in each marathon
@@ -456,7 +461,6 @@ project1_with_age_group <- project1 %>%
                    Age >= 47 & Age <= 61 ~ "Age Group:47-61",
                    Age >= 62 & Age <= 91 ~ "Age Group:62-91"))
 ```
-
 
 ```{r, fig.cap="Effect of Air Quality on Marathon Performances", fig.pos='H', fig.height=3, fig.width=5}
 # Create a data frame summarising %CR by air quality, sex and age
@@ -509,7 +513,7 @@ cor_heatmap <- ggplot(cor_melt, aes(x = Var1, y = Var2, fill = value)) +
 cor_heatmap
 ```
 
-The following plots illustrate the effect of various weather parameters—Wet Bulb Globe Temperature (WBGT), humidity, solar radiation, and wind—on marathon performance (%CR) across different age groups and by sex. WBGT has a pronounced impact, particularly on older runners (age group 62–91), with %CR increasing more steeply as WBGT rises above 10, indicating greater performance slowing in this group. This trend is more pronounced in females than males. For humidity, the performance of older runners also shows a stronger sensitivity, while younger groups (14–31 and 32–46) exhibit relatively stable performance. Similarly, solar radiation disproportionately affects older runners, with %CR showing an unstable fluctuation as solar radiation increases, whereas younger runners remain less affected, with slight upward trend in %CR as solar radiation increases. Lastly, wind has a moderate effect, with %CR showing a slight increase for older groups as wind speed rises, although the impact is less distinct compared to WBGT and solar radiation. Overall, the results consistently show that older runners, particularly females, are more sensitive to adverse weather conditions, while younger age groups maintain better performance stability across varying environmental factors.
+The following plots illustrate the effect of various weather parameters---Wet Bulb Globe Temperature (WBGT), humidity, solar radiation, and wind---on marathon performance (%CR) across different age groups and by sex. WBGT has a pronounced impact, particularly on older runners (age group 62--91), with %CR increasing more steeply as WBGT rises above 10, indicating greater performance slowing in this group. This trend is more pronounced in females than males. For humidity, the performance of older runners also shows a stronger sensitivity, while younger groups (14--31 and 32--46) exhibit relatively stable performance. Similarly, solar radiation disproportionately affects older runners, with %CR showing an unstable fluctuation as solar radiation increases, whereas younger runners remain less affected, with slight upward trend in %CR as solar radiation increases. Lastly, wind has a moderate effect, with %CR showing a slight increase for older groups as wind speed rises, although the impact is less distinct compared to WBGT and solar radiation. Overall, the results consistently show that older runners, particularly females, are more sensitive to adverse weather conditions, while younger age groups maintain better performance stability across varying environmental factors.
 
 ```{r, fig.cap= "Effect of WBGT and Humidity on Marathon Performance",fig.pos='H', fig.height=5, fig.width=10}
 
@@ -593,10 +597,9 @@ Given the exploratory data analysis (EDA) plots, we observed significant weather
 & + \beta_{11} \cdot \text{WBGT} \cdot \text{Age} + \beta_{12} \cdot \text{aqi\_values} \cdot \text{Age} + \epsilon
 \end{align*}
 ```
-
 From the model for male runners, significant predictors included humidity(`Percent_RH`), age (`age`), quadratic form of age (`Age^2`), solar radiation (`SR.W.m2`), interaction term between humidity and age (`Percent_RH:Age`), interaction term between solar radiation and age (`Age:SR.W.m2`), and interaction term between WBGT and age (`Age:WBGT`). These results indicate that age and its quadratic term have the strongest effects on performance, with interactions between weather parameters and age further influencing outcomes. For female runners, significant predictors included age (`Age`), quadratic form of age (`Age^2`), and WBGT (`WBGT`), highlighting the dominant role of age and WBGT on performance for women. Notably, the quadratic term (`Age^2`) is significant in both models, confirming the nonlinear relationship between age and performance observed in the EDA plots. However, fewer interaction terms were significant in the female model, suggesting different sensitivities to environmental conditions compared to male runners.
 
-These results align with the trends observed in the EDA plots, confirming that age and environmental conditions, particularly WBGT, significantly affect performance, with nuanced differences between sexes. 
+These results align with the trends observed in the EDA plots, confirming that age and environmental conditions, particularly WBGT, significantly affect performance, with nuanced differences between sexes.
 
 ```{r}
 # Stratify by sex
