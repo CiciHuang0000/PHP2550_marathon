@@ -10,7 +10,12 @@ This project utilizes data from a randomized, placebo-controlled trial that was 
 
 ## Results
 
-Fagerstrom Test for Nicotine Dependence Score (FTCD Score) and Nicotine Metabolism Ratio (NMR) were found to be important moderators of the effects of BA for smoking cessation. Varenicline, BA, education and non-hispanic white indicator are valuable predictors of abstinence.
+Fagerstrom Test for Nicotine Dependence Score (FTCD Score) and Nicotine Metabolism Ratio (NMR) were found to be important moderators of the effects of BA for smoking cessation. Varenicline, BA, education and non-hispanic white indicator are valuable predictors of abstinence. The following two tables show the Lasso selected results:
+
+![](<images/lasso result.png>)
+
+![](<images/lasso odds ratio.png>)
+
 
 ## Conclusion
 
