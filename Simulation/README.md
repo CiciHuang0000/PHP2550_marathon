@@ -10,7 +10,12 @@ Using the ADEMP framework, this study examines different cost scenarios characte
 
 ## Results
 
-The optimal pairs of G and R with the lowest variances were consistently observed in designs with large G and small R where we set $\gamma$ and $\sigma$ to be 1, regardless of the ratio between $c_1$ and $c_2$. This finding was consistent across both normal and Poisson outcomes. When varying $\gamma$ and $\sigma$, results showed that $\gamma$ had a significant impact on variance of $\beta$ and the impact is more pronounced when Y has a Poisson distribution, with scenarios with larger G proving more effective at mitigating the effects of increased $\gamma$. Scenarios with larger G also demonstrated to have more stable variance across different values of $\beta$. 
+The optimal pairs of G and R with the lowest variances were consistently observed in designs with large G and small R where we set $\gamma$ and $\sigma$ to be 1, regardless of the ratio between $c_1$ and $c_2$. This finding was consistent across both normal and Poisson outcomes. When varying $\gamma$ and $\sigma$, results showed that $\gamma$ had a significant impact on variance of $\beta$ and the impact is more pronounced when Y has a Poisson distribution, with scenarios with larger G proving more effective at mitigating the effects of increased $\gamma$. Scenarios with larger G also demonstrated to have more stable variance across different values of $\beta$. The following two table represents optimal G and R pairs for normal distributed outcome and Poisson distributed outcome, respectively. 
+
+![](<images/optimal G and R normal.png>)
+
+![](<images/optimal G and R poisson.png>)
+
 
 ## Conclusions
 

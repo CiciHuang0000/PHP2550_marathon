@@ -16,6 +16,7 @@ The findings revealed that age is the most significant factor influencing marath
 
 The study highlights the critical role of age in marathon performance, with weather conditions having a relatively minor but observable impact. Older runners are more sensitive to adverse environmental factors, while younger runners show greater performance stability. Limitations include the lack of consistent cohorts across years and races, smaller sample sizes for older age groups, and uncertainties in air quality measurements. Future research could employ advanced models and larger datasets to refine these findings and address the identified limitations.
 
+
 ## Files
 ### R
 `preprocessing.R`: Contains the preprocessing steps necessary for exploratory data analysis. 
