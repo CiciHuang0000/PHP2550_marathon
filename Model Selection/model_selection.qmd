@@ -275,13 +275,6 @@ test_imputed <- mice(test_data %>% select(-treatment), m = 5, method = 'pmm',
                      printFlag = FALSE)
 ```
 
-
-
-
-
-
-
-**Old lasso**
 ```{r}
 # Run lasso on 5 imputed dataset and store the results 
 set.seed(1234)
@@ -352,8 +345,6 @@ row_zero_counts <- apply(lasso_result, 1, function(x) sum(x == 0))
 # Filter out rows with 2 or more zeros
 filtered_lasso_result <- lasso_result[row_zero_counts <= 2, ]
 ```
-
-**Old lasso ends here**
 
 ## Evaluation Metric
 
